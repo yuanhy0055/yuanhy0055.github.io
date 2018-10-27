@@ -6,20 +6,21 @@
     </head>
 
     <body>
-        <!--ÕâÊÇÎÒÃÇµÄView-->
+        <!--è¿™æ˜¯æˆ‘ä»¬çš„View-->
         <div id="app">
             {{ message }}
         </div>
     </body>
-    <script src="js/vue.js"></script>
+    <!-- å¼€å‘çŽ¯å¢ƒç‰ˆæœ¬ï¼ŒåŒ…å«äº†æœ‰å¸®åŠ©çš„å‘½ä»¤è¡Œè­¦å‘Š -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script>
-        // ÕâÊÇÎÒÃÇµÄModel
+        // è¿™æ˜¯æˆ‘ä»¬çš„Model
         var exampleData = {
             message: 'Hello World!'
         }
 
-        // ´´½¨Ò»¸ö Vue ÊµÀý»ò "ViewModel"
-        // ËüÁ¬½Ó View Óë Model
+        // åˆ›å»ºä¸€ä¸ª Vue å®žä¾‹æˆ– "ViewModel"
+        // å®ƒè¿žæŽ¥ View ä¸Ž Model
         new Vue({
             el: '#app',
             data: exampleData
