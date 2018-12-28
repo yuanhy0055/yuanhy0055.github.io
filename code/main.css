@@ -24,3 +24,22 @@ h6 { font-size: 1.2em; }
 
 p {background-color: #f3c450}
 p.no2 {background-color: gray; padding: 20px;}
+
+a,
+a:link,
+a:visited {
+	color: #600;
+	background: transparent;
+	text-decoration: none;
+	}
+
+a:hover {
+	color: #000;
+	background: transparent;
+	text-decoration: underline;
+	}
+
+address {
+	font-style: normal;
+	font-size: 0.8em;
+	}
