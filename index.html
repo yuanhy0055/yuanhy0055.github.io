@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <title>Denico</title>
 		<link rel="stylesheet" type="text/css" href="code/main.css" />
+        <script type="text/javascript" src="code/main.js"></script>
     </head>
 
     <body>
@@ -38,13 +39,15 @@
             <label>
                 <input type="text" v-model="message"/>
             </label>
+
+            <button onclick="ImgCtrl();">显示或隐藏</button>
         </div>
         <div>
             <p>
-                <img src="tmp/dalvikplugin.png" width="319" alt="Pic"/>
+                <img src="tmp/dalvikplugin.png" width="319" alt="Pic" id="hide_1" style="display:none"/>
             </p>
             <p>
-                <img src="tmp/tiann_plugin.png" width="393"  alt="Pic"/>
+                <img src="tmp/tiann_plugin.png" width="393" alt="Pic" id="hide_2" style="display:none"/>
             </p>
             <p>
                 <img src="tmp/TODO.png" width=""  alt="Pic"/>
@@ -64,14 +67,14 @@
         new Vue({
             el: '#app',
             data: exampleData
-        })
+        });
 
         var browser = navigator.appName;//获取浏览器名字
         var b_version = navigator.appVersion;//获取浏览器版本信息
         var version = parseFloat(b_version);//提取浏览器版本号
 
-        document.write("浏览器名称是: " + browser)//浏览器名称是: Netscape
-        document.write("<br />")
+        document.write("浏览器名称是: " + browser);//浏览器名称是: Netscape
+        document.write("<br />");
         document.write("浏览器版本是: " + version)//浏览器版本是: 5
     </script>
 </html>
