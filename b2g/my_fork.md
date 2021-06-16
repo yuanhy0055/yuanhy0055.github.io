@@ -1,10 +1,3 @@
-## This Page is My project from Others
-* forked from [cyanogen/vncflinger](https://github.com/cyanogen/vncflinger)
-* vncserver for Droid [cyanogen/tigervnc](https://github.com/cyanogen/tigervnc)
-* [不忘初心 方得始终](https://terenceli.github.io/)
-
----
-
 ## Video on Demand
 - Prepare (LOCAL)
 ```
@@ -47,3 +40,9 @@ https://www.cnblogs.com/xl2432/p/11090613.html
 2. 阅读DDK书 - 建立书的环境
 3. aosp - 按CM的配置再构造一个机型
 4. 想编译VLC for AOS
+---
+## This Page is My project from Others
+* forked from [cyanogen/vncflinger](https://github.com/cyanogen/vncflinger)
+* vncserver for Droid [cyanogen/tigervnc](https://github.com/cyanogen/tigervnc)
+* [不忘初心 方得始终](https://terenceli.github.io/)
+---

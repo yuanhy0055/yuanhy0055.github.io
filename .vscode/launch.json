@@ -8,7 +8,7 @@
             "type": "pwa-chrome",
             "request": "launch",
             "name": "File->index.html",
-            "file": "${workspaceFolder}/index.html"
+            "file": "${workspaceFolder}/b2g/main.html"
         }
     ]
 }
