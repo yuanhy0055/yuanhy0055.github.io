@@ -1,4 +1,21 @@
+## HLS,HTTP,RTSP,RTMP协议简介
+
+| 协议 | httpflv | rtmp | hls | dash |
+| :---- | :---- | :----: | ---- | ---- |
+| 传输方式 | http流 | tcp流 | http | http |
+| 视频封装格式 | flv | flv tag | TS文件 | Mp4/3gp/webm |
+| 延时 | 低 | 低 | 高 | 高 |
+| 数据分段 | 连续流 | 连续流 | 切片文件 | 切片文件 |
+| Html5播放 | 可通过html5解封包播放(flv.js) | 不支持 | 可通过html5解封包播放(hls.js) | 如果dash文件列表是mp4webm文件，可直接播放 |
+
+---
 ## Video on Demand
+## 编译SRS
+- git clone -b 4.0release https://gitee.com/ossrs/srs.git
+- cd srs/trunk && ./configure && make
+- ./objs/srs -c conf/srs.conf
+
+## 编译Nginx + Module 方案
 - Prepare (LOCAL)
 ```
 #!/bin/bash
