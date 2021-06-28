@@ -7,8 +7,14 @@
         {
             "type": "pwa-chrome",
             "request": "launch",
-            "name": "File->index.html",
-            "file": "${workspaceFolder}/index.html"
-        }
+            "name": "Main.html",
+            "file": "${workspaceFolder}/avc/aos_main.html"
+        },
+        // {
+        //     "type": "pwa-chrome",
+        //     "request": "launch",
+        //     "name": "File->index.html",
+        //     "file": "${workspaceFolder}/index.html"
+        // },
     ]
 }

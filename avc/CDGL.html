@@ -1,0 +1,19 @@
+<html>
+<head>
+<script src="jquery.min.js"></script>
+<script>
+$(document).ready(function()
+{
+	var canvas=document.getElementById('myCanvas');
+	var ctx=canvas.getContext('2d');
+	ctx.fillStyle='#000000';
+	ctx.fillRect(0,0,799,599); //起始坐标和填充色
+});
+
+</script>
+</head>
+
+<body>
+<canvas id="myCanvas" width=800px height=600px>浏览器不支持canvas属性</canvas>
+</body>
+</html>
