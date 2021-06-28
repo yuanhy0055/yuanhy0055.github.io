@@ -1,11 +1,21 @@
-## This Page is My project from Others
-* forked from [cyanogen/vncflinger](https://github.com/cyanogen/vncflinger)
-* vncserver for Droid [cyanogen/tigervnc](https://github.com/cyanogen/tigervnc)
-* [不忘初心 方得始终](https://terenceli.github.io/)
+## HLS,HTTP,RTSP,RTMP协议简介
+
+| 协议 | httpflv | rtmp | hls | dash |
+| :---- | :---- | :----: | ---- | ---- |
+| 传输方式 | http流 | tcp流 | http | http |
+| 视频封装格式 | flv | flv tag | TS文件 | Mp4/3gp/webm |
+| 延时 | 低 | 低 | 高 | 高 |
+| 数据分段 | 连续流 | 连续流 | 切片文件 | 切片文件 |
+| Html5播放 | 可通过html5解封包播放(flv.js) | 不支持 | 可通过html5解封包播放(hls.js) | 如果dash文件列表是mp4webm文件，可直接播放 |
 
 ---
-
 ## Video on Demand
+## 编译SRS
+- git clone -b 4.0release https://gitee.com/ossrs/srs.git
+- cd srs/trunk && ./configure && make
+- ./objs/srs -c conf/srs.conf
+
+## 编译Nginx + Module 方案
 - Prepare (LOCAL)
 ```
 #!/bin/bash
@@ -47,3 +57,9 @@ https://www.cnblogs.com/xl2432/p/11090613.html
 2. 阅读DDK书 - 建立书的环境
 3. aosp - 按CM的配置再构造一个机型
 4. 想编译VLC for AOS
+---
+## This Page is My project from Others
+* forked from [cyanogen/vncflinger](https://github.com/cyanogen/vncflinger)
+* vncserver for Droid [cyanogen/tigervnc](https://github.com/cyanogen/tigervnc)
+* [不忘初心 方得始终](https://terenceli.github.io/)
+---
