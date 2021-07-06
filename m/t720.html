@@ -6,6 +6,39 @@
 <a href="about:config">Aboutconfig</a> <a href="chrome://about/">AboutChrome</a>
 
 <pre>
+    Build webrtc for Android - https://medium.com/@colibriwang/build-webrtc-for-android-ab580a703492
+    Build webrtc for android step by step:
+
+    Install Ubuntu18.04LTS.
+    Install python sudo apt-get install python
+    Install Chromium depot_tools
+    git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
+    Add depot_tools to path.
+    export PATH=$PATH:~/depot_tools
+
+    Download source code
+    fetch --nohooks webrtc_android &&gclient sync
+
+    In src directory,Generate project with GN
+    gn gen out/Debug --args='target_os="android" target_cpu="arm64"'
+
+    Download build dependencies
+    ./build/install-build-deps.sh
+
+    Compile source code with nijia
+    ninja -C out/Debug
+
+    Copy libwebrtc.jar and libjingle_peerconnection_so.so to Android Project.
+    libwebrtc.jar → project/app/libs/libwebrtc.jar
+    libjingle_peerconnection_so.so → project/app/src/main/jniLibs/arm64-v8a/libjingle_peerconnection_so.so
+
+    Make sure project/app/build.gradle contains below build dependency
+    dependencies {
+    …
+    implementation fileTree(dir: ‘libs’, include: [‘*.jar’])
+    implementation ‘com.google.guava:guava:23.4-jre’
+    }
+
     视频播放客户端
     build VLC for Android - https://wiki.videolan.org/AndroidCompile/
 
