@@ -8,7 +8,7 @@
             "type": "pwa-chrome",
             "request": "launch",
             "name": "Main.html",
-            "file": "${workspaceFolder}/avc/aos_main.html"
+            "file": "${workspaceFolder}/index.html"
         },
         // {
         //     "type": "pwa-chrome",
