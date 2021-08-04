@@ -51,6 +51,37 @@ ffmpeg -re -i scene1.mp4 -vcodec libx264 -vprofile baseline -acodec aac -ar 4410
 - Refer of original  
 https://www.cnblogs.com/xl2432/p/11090613.html
 
+```
+    nginx.conf =>
+    rtmp {
+        server {
+            listen 9999;
+            application live {
+                live on;
+            }
+    
+            application vod {
+                play /tmp/video;
+            }
+        }
+    
+        server {
+            listen 1935;
+            chunk_size 4000;
+            application show {
+                live on;
+                # Turn on HLS
+                hls on;
+                hls_path /dev/shm/hls/;
+                hls_fragment 3;
+                hls_playlist_length 60;
+                # disable consuming the stream from nginx as rtmp
+                deny play all;
+            }
+        }
+    }
+```
+
 ## KE-BIAO
 1. 在FT2000上编译NGINX+RTMP ------ OK
 2. ~~ 编译、试用SRS ... ...
