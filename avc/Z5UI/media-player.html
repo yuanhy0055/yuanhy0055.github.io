@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--
+// Sample Media Player using HTML5's Media API
+// 
+// Ian Devlin (c) 2012
+// http://iandevlin.com
+// http://twitter.com/iandevlin
+//
+// This was written as part of an article for the February 2013 edition of .net magazine (http://netmagazine.com/)
+-->
+<html lang='en'>
+	<head>
+		<meta charset='utf-8' />
+		<title>Using HTML5's Media API</title>
+		<link href='media-player.css' rel='stylesheet' />
+		<script src='media-player.js'></script>
+	</head>
+<body>
+	<h1>使用 HTML5's Media API</h1>
+	<div id='media-player'>
+		<video id='media-video' controls>
+			<source src='/medias/Vitas_Star.mp4' type='video/mp4'>
+			<source src='parrots.webm' type='video/webm'>
+		</video>
+		<div id='media-controls'>
+			<progress id='progress-bar' min='0' max='100' value='0'>0% played</progress>
+			<button id='replay-button' class='replay' title='replay' onclick='replayMedia();'>Replay</button>	
+			<button id='play-pause-button' class='play' title='play' onclick='togglePlayPause();'>Play</button>
+			<button id='stop-button' class='stop' title='stop' onclick='stopPlayer();'>Stop</button>
+			<button id='volume-inc-button' class='volume-plus' title='increase volume' onclick='changeVolume("+");'>Increase volume</button>
+			<button id='volume-dec-button' class='volume-minus' title='decrease volume' onclick='changeVolume("-");'>Decrease volume</button>
+			<button id='mute-button' class='mute' title='mute' onclick='toggleMute("true");'>Mute</button>	
+		</div>
+		<div id='media-play-list'>
+			<h2>播放列表</h2>
+			<ul id='play-list'>
+				<li><span class='play-item' onclick='loadVideo("/medias/Vitas_Star.mp4", "/medias/Vitas_Star.webm");'>星星</span></li>
+				<li><span class='play-item' onclick='loadVideo("/medias/Vitas_FengX.mp4", "/medias/Vitas_FengX.webm");'>风行</span></li>
+				<li><span class='play-item' onclick='loadVideo("/medias/Vitas_Hecry.mp4", "/medias/Vitas_Hecry.webm");'>鹤之泣</span></li>
+				<li><span class='play-item' onclick='loadVideo("/medias/GaoY_Vitasss.mp4", "/medias/V.webm");'>简介</span></li>
+			</ul>
+		</div>
+	</div>	
+</body>
+</html>
