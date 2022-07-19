@@ -5,10 +5,11 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "pwa-chrome",
+            "type": "chrome",
             "request": "launch",
             "name": "Main.html",
-            "file": "${workspaceFolder}/index.html"
+            //"file": "${workspaceFolder}/index.html"
+            "file": "${file}"
         },
         // {
         //     "type": "pwa-chrome",
