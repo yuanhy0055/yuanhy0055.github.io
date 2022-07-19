@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SRS</title>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="./ampsSDK.js"></script>
+</head>
+<body>
+<div class="container">
+    <div>
+        URL:
+        <input type="text" id="txt_url" class="input-xxlarge" value="webrtc://119.23.20.22/live/livestream">
+        <button class="btn btn-primary" id="btn_play" onclick="startPlay()">播放视频</button>
+        <button class="btn btn-primary" id="btn_play" onclick="stopPlay()">停止播放</button>
+    </div>
+    <video class="player" id="rtc_media_player" controls autoplay></video>
+</div>
+<div class="container">
+    <div>
+        URL:
+        <input type="text" id="txt_url" class="input-xxlarge" value="webrtc://119.23.20.22/live/livestream">
+        <button class="btn btn-primary" id="btn_play" onclick="startPlay1()">播放视频</button>
+        <button class="btn btn-primary" id="btn_play" onclick="stopPlay1()">停止播放</button>
+    </div>
+    <video class="player" id="rtc_media_player1" controls autoplay></video>
+</div>
+<script>
+    var streamAlias ="gxm";
+    function startPlay(){
+        console.log("===gxm");
+        ampsSDK.initPlayer(streamAlias);
+        var video = document.getElementById("rtc_media_player");
+        ampsSDK.play("webrtc://119.23.20.22/live/livestream",video,streamAlias);
+    };
+    function stopPlay(){
+        ampsSDK.stopPlay(streamAlias);
+    }
+    var streamAlias1 ="gxm1";
+    function startPlay1(){
+        console.log("===gxm1");
+        ampsSDK.initPlayer(streamAlias1);
+        var video1 = document.getElementById("rtc_media_player1");
+        ampsSDK.play("webrtc://119.23.20.22/live/livestream",video1,streamAlias1);
+    };
+    function stopPlay1(){
+        ampsSDK.stopPlay(streamAlias1);
+    }
+</script>
+</body>
+</html>
+<style>
+    body{
+        padding-top: 30px;
+    }
+    .input-xxlarge{
+        width: 30%;
+    }
+    .player{
+        margin: 1%;
+        width: 20%;
+    }
+</style>

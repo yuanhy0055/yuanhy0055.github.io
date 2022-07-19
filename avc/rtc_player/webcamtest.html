@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<head>
+    <script type="text/javascript">
+        if('mediaDevices' in navigator && 'getUserMedia' in navigator.mediaDevices) {
+            console.log("Lets get this party started")
+        }
+    </script>
+</head>
+<html>
+<!--
+<li>Webcam viewer</li>
+<video id="webcam-stream" style="background:#000;">Webcam viewer</video>
+-->
+
+<div>
+    <select id="select"></select>
+    <input type="button" title="开启摄像头" value="开启摄像头" onclick="getMedia()" />
+    <input type="button" title="开启截图" value="截图" onclick="screenShot()" />
+</div>
+
+<div>
+    <video id="video" style="background:#000;" width="320" height="240"></video>
+    <canvas id='canvas' style="display: none;" width='320' height='240'></canvas>
+    <img id="MyPix" width='320' height='240' style="background:#000;">
+</div>
+
+<script type="text/javascript" src="./webcamSDK.js"></script>
+
+</html>
