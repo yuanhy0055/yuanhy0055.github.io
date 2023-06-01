@@ -1,3 +1,5 @@
+## ADB remote emulator
+- ```ssh -CNL 5554:localhost:5554 -L 5555:localhost:5555 -p 50022 Nico@10.9.11.19```
 ## HLS,HTTP,RTSP,RTMP协议简介
 
 | 协议 | httpflv | rtmp | hls | dash |
