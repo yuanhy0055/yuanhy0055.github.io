@@ -4,7 +4,7 @@ body {
 	font-family: Georgia,"New Century Schoolbook","Nimbus Roman No9 L",serif;
 	font-size: 86%;
 	color: #c4c42f;
-	background: #3b365c;
+	background: #003030;
 	}
 
 h1, h2, h3, h4, h5, h6  {
@@ -22,7 +22,7 @@ h4 { font-size: 1.4em; }
 h5 { font-size: 1.3em; }
 h6 { font-size: 1.2em; }
 
-p {background-color: #3b365c}
+p {background-color: #003030}
 p.no2 {background-color: gray; padding: 20px;}
 
 a,

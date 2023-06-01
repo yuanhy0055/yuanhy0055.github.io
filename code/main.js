@@ -10,4 +10,11 @@ function ImgCtrl(){
         imgId2.style.display="none";
     else
         imgId2.style.display="block";
+
+
+    var imgId3=document.getElementById("hide_3");
+    if(imgId3.style.display=="block")
+        imgId3.style.display="none";
+    else
+        imgId3.style.display="block";
 }

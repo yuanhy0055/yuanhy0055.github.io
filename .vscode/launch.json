@@ -7,9 +7,10 @@
         {
             "type": "chrome",
             "request": "launch",
-            "name": "Main.html",
-            //"file": "${workspaceFolder}/index.html"
-            "file": "${file}"
+            "name": "html-main",
+            "file": "${workspaceFolder}/index.html",
+            //"file": "${file}"
+            "webRoot": "${workspaceFolder}"
         },
         // {
         //     "type": "pwa-chrome",
